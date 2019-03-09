@@ -5,7 +5,6 @@ import com.aaa.util.JedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +26,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<Map> getUserList() {
         //从redis  取 对象
+        System.out.println(userDao.getUserList());
         Object userList = jedisUtil.getObject("userList");
+        System.out.println(123123);
         if(userList!=null){//如果存在，直接返回
             System.out.println("从redis缓存中取！！！！！");
             return (List<Map>)userList;

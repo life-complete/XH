@@ -11,8 +11,7 @@ import redis.clients.jedis.Jedis;
 public class TestRedisConnect {
 
     public static void main(String[] args) {
-        Jedis jedis =  new Jedis("192.168.94.15",7001);
-        System.out.println(jedis.ping());
+        Jedis jedis =  new Jedis("192.168.94.13",6379);
         System.out.println(SerializeUtil.serialize("userList"));
 
     }

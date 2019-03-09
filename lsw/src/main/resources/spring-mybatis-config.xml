@@ -13,7 +13,7 @@
     <bean id="dataSourceA" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="${jdbc.driver}"></property>
         <property name="url" value="${jdbc.url}"></property>
-        <property name="username" value="${jdbc.username}"></property>
+        <property name="username" value="root"></property>
         <property name="password" value="${jdbc.password}"></property>
         <property name="initialSize" value="${initialSize}"></property>
         <property name="maxActive" value="${maxActive}"></property>
