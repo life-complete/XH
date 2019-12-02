@@ -1,0 +1,174 @@
+package com.sybercare.hospital.common.jobs;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.sybercare.hospital.health.dao.BloodGlucoseDAO;
+import com.sybercare.hospital.health.entity.BloodGlucose;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import com.sybercare.hospital.common.utils.Constants;
+import com.wonders.measure.common.utils.InterfaceEnCode;
+
+import net.sf.json.JSONObject;
+import net.sf.json.JsonConfig;
+import net.sf.json.util.PropertyFilter;
+
+/**
+ * 功能：运行定时业务
+ *
+ *
+ */
+@Component
+public class Jobs {
+	public final static long ONE_Minute = 60 * 1000;
+
+	private static final String Private = null;
+
+	/*@Autowired
+	private BloodPressureDAO bloodPressureDAO;*/
+	@Autowired
+	private BloodGlucoseDAO bloodGlucoseDAO;
+
+	@Scheduled(cron = "0 0/1 * * * ?")
+	//@Scheduled(cron = "0/10 * * * * ?")
+	public void doXueYaIt() {
+		try {
+			System.out.println("job 血糖定时器：" + Constants.convert(new Date(), Constants.format2));
+			//List<BloodPressure> bloodGlucoses1 = bloodPressureDAO.getBloodPressureByOperateState();
+			List<BloodGlucose> bloodGlucoses1 =bloodGlucoseDAO.getBloodGlucoseByOperateState(0);
+			for (BloodGlucose bloodGlucose : bloodGlucoses1) {
+				boolean result = requestBP(bloodGlucose);
+				if (result) {
+					//bloodPressureDAO.updateBloodGlucoseOperateState(bloodPressure.getId(), (short) 3);
+					bloodGlucoseDAO.updateBloodGlucoseOperateState(bloodGlucose.getId(), (short) 1);
+				}
+				Thread.sleep(500);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+    private boolean isBG = true;
+	public boolean requestBP(BloodGlucose bloodGlucose) throws Exception {
+		boolean requestBP = false;
+		//String url = "http://101.89.187.48:8080/Contract/api/archive/api/getJkxwData";
+		//String url = "http://localhost:10078/xh/aaa";
+		//String url = "http://172.30.2.115:9071/measure/api/chronic/submit";
+		String url = "http://172.30.2.115:9071/measure/api/patSignSubmit";
+		//Jkxwdata P = new Jkxwdata();
+		Patdata patdata = new Patdata();
+
+		//Long id = 500000000L + bloodPressure.getId();// id规定从500000000L开始
+		//jkxwdata.setId(id + "");
+//		jkxwdata.setName(bloodPressure.getNAME());
+//		jkxwdata.setUserUid(bloodPressure.getUserUid());
+//		jkxwdata.setMobile(bloodPressure.getMobile());
+//		String idCard = bloodPressure.getIdCard();
+//		if (idCard == null || idCard.length() <= 0) {
+//			return false;
+//		}
+//		IdcardInfoExtractor idcardInfo = new IdcardInfoExtractor(bloodPressure.getIdCard());
+//		jkxwdata.setSex(idcardInfo.getGender());
+//		jkxwdata.setAge(idcardInfo.getAge() + "");
+//		jkxwdata.setIdCard(bloodPressure.getIdCard());
+//		jkxwdata.setCheckTime(Constants.convert(Constants.convert(bloodPressure.getCheckTime(), Constants.format2),
+//				Constants.format3));
+		IdcardInfoExtractor idcardInfo = new IdcardInfoExtractor(String.valueOf(bloodGlucose.getIdCard()));
+		patdata.setPersoncard(bloodGlucose.getIdCard());
+		/*patdata.setName(bloodGlucose.getName());
+		patdata.setGender(idcardInfo.getGender());*/
+		//patdata.setBirth(Constants.convert(idcardInfo.getBirthday(), Constants.format1));
+		patdata.setMeasureTime(Constants.convert(Constants.convert(bloodGlucose.getMeasureTime(), Constants.format2), Constants.format2));
+		patdata.setMeasureSourceId(String.valueOf("0005"));
+		patdata.setMeasureLocation(String.valueOf(3));
+		//patdata.setMeasureOrgId("42508153900");
+		//patdata.setMeasureOrgId("42503448400");
+		patdata.setMeasureOrgId("42505239100");
+		patdata.setMeasureMode(String.valueOf(1));
+		patdata.setDeviceId(bloodGlucose.getDeviceSn());
+		patdata.setDeviceType(String.valueOf("Accu-Chek"));
+
+	    BloodPressureVo bloodPressureVo=new BloodPressureVo();
+
+		Integer bgStatus = bloodGlucose.getStatus();
+		String status = "";
+		switch (bgStatus) {
+			case 0:
+				status = "1";
+			case 1:
+				status = "2";
+			case 2:
+				status = "1";
+			case 3:
+				status = "2";
+			case 4:
+				status = "1";
+			case 5:
+				status = "2";
+			case 6:
+				status = "3";
+			case 7:
+				status = "3";
+			case 8:
+				status = "3";
+			case 9:
+				status = "3";
+				break;
+			default:
+				break;
+		}
+
+		Double value = bloodGlucose.getValue();
+		String resultBg = "";
+
+		if (value < 3.3) {
+			resultBg ="4";
+		}else if (!value.equals(991) && !value.equals(990) && value > 11.0){
+			resultBg ="3";
+		}else if (value.equals(991) || value.equals(990)){
+			resultBg ="2";
+		}else
+			resultBg = "1";
+
+	    bloodPressureVo.setMeasureType("2001");
+//bloodPressureVo.setMeasureData(bloodGlucose.getValue()+"|"+"mmol/l" +"|"+"0.3-33.3"+"|"+bloodGlucose.getEvaluation()+"|"+bloodGlucose.getStatus()+"|"+ "1");
+		bloodPressureVo.setMeasureData(bloodGlucose.getValue()+"|"+"mmol/L" +"|"+"0.6-33.3"+"|"+resultBg+"|"+status+"|"+ "1");
+
+		List <BloodPressureVo> datalist = new ArrayList<BloodPressureVo>();
+		datalist.add(bloodPressureVo);
+		patdata.setDataList(datalist);
+
+		Map<String, String> map = new HashMap<String, String>();
+
+		JsonConfig jsonConfig = new JsonConfig();
+		PropertyFilter filter = new PropertyFilter() {
+			public boolean apply(Object object, String fieldName, Object fieldValue) {
+				return null == fieldValue;
+			}
+		};
+		jsonConfig.setJsonPropertyFilter(filter);
+		JSONObject json = JSONObject.fromObject(patdata, jsonConfig);
+		System.out.println("请求数据：" + json.toString());
+		String header = InterfaceEnCode.getInterfaceKey();
+		map.put("param", InterfaceEnCode.encrypt(json.toString()));
+		HttpClientUtil util = new HttpClientUtil();
+		String result = util.doPost(header, url, map);
+	    //String result = "{\"code\":\"1\",\"msg\":\"数据传输成功\"}";
+		JSONObject resultJson = JSONObject.fromObject(result);
+		String code = resultJson.getString("code");
+		if (code.equals("1")) {
+			requestBP = true;
+		}
+		requestBP=true;
+		System.out.println("返回结果：" + result);
+
+		return requestBP;
+	}
+}

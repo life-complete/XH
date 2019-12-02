@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.hesicare.hospital.health.mappering.TripartiteDeviceMapper">
+	<resultMap type="com.hesicare.hospital.health.entity.SysPatient" id="SysPatientResult">
+		<result property="patientId" column="patient_id" />
+		<result property="deptId" column="dept_id" />
+		<result property="avatar" column="avatar" />
+		<result property="loginName" column="login_name" />
+		<result property="patientName" column="patient_name" />
+		<result property="mobile" column="mobile" />
+		<result property="password" column="password" />
+		<result property="birth" column="birth" />
+		<result property="sex" column="sex" />
+		<result property="hospitalizedNum" column="hospitalized_num" />
+		<result property="hospitalizedDate" column="hospitalized_date" />
+		<result property="leaveDate" column="leave_date" />
+		<result property="hospitalizedType" column="hospitalized_type" />
+		<result property="wristbandCode" column="wristband_code" />
+		<result property="bedNum" column="bed_num" />
+		<result property="doctorId" column="doctor_id" />
+		<result property="doctorName" column="doctor_name" />
+		<result property="address" column="address" />
+		<result property="magneticCard" column="magnetic_card" />
+		<result property="idCard" column="id_card" />
+		<result property="chipCard" column="chip_card" />
+		<result property="status" column="status" />
+		<result property="loginIp" column="login_ip" />
+		<result property="loginDate" column="login_date" />
+		<result property="createBy" column="create_by" />
+		<result property="createTime" column="create_time" />
+		<result property="updateBy" column="update_by" />
+		<result property="updateTime" column="update_time" />
+		<result property="remark" column="remark" />
+		<result property="userType" column="user_type" />
+		<result property="high" column="high" />
+		<result property="weight" column="weight" />
+		<result property="waist" column="waist" />
+		<result property="hip" column="Hip" />
+		<result property="contactsName" column="contacts_name" />
+		<result property="contactsPhone" column="contacts_phone" />
+		<result property="userLevel" column="user_level" />
+		<result property="pressureLevel" column="pressure_level" />
+		<result property="pressureDangerLevel" column="pressure_danger_level" />
+		<result property="glucoseDangerLevel" column="glucose_danger_level" />
+		<result property="age" column="age" />
+		<result property="deptName" column="dept_name" />
+		<result property="codeId" column="code_id" />
+		<result property="employeeCard" column="employee_card" />
+	</resultMap>
+	<select id="selectPatientByPhoneAndIdCard"
+		resultMap="SysPatientResult">
+		SELECT * FROM sys_patient
+		<where>
+			<if test="phone!=null and phone!=''">AND mobile=#{phone}</if>
+			<if test="idCard!=null and idCard!=''">AND id_card=#{idCard}</if>
+		</where>
+	</select>
+	<update id="updatePatient"
+		parameterType="com.hesicare.hospital.health.entity.SysPatient">
+		update sys_patient
+		<trim prefix="SET" suffixOverrides=",">
+			<if test="deptId != null  and deptId != ''  ">dept_id = #{deptId},</if>
+			<if test="avatar != null  and avatar != ''  ">avatar = #{avatar},</if>
+			<if test="loginName != null  and loginName != ''  ">login_name = #{loginName},</if>
+			<if test="patientName != null  and patientName != ''  ">patient_name = #{patientName},</if>
+			<if test="mobile != null  and mobile != ''  ">mobile = #{mobile},</if>
+			<if test="password != null  and password != ''  ">password = #{password},</if>
+			<if test="birth != null   ">birth = #{birth},</if>
+			<if test="sex != null  and sex != ''  ">sex = #{sex},</if>
+			<if test="hospitalizedNum != null  and hospitalizedNum != ''  ">hospitalized_num = #{hospitalizedNum},</if>
+			<if test="hospitalizedDate != null   ">hospitalized_date = #{hospitalizedDate},</if>
+			<if test="leaveDate != null  ">leave_date = #{leaveDate},</if>
+			<if test="hospitalizedType != null  and hospitalizedType != ''  ">hospitalized_type = #{hospitalizedType},</if>
+			<if test="wristbandCode != null  and wristbandCode != ''  ">wristband_code = #{wristbandCode},</if>
+			<if test="bedNum != null  and bedNum != ''  ">bed_num = #{bedNum},</if>
+			<if test="doctorId != null  and doctorId != ''  ">doctor_id = #{doctorId},</if>
+			<if test="address != null  and address != ''  ">address = #{address},</if>
+			<if test="magneticCard != null  and magneticCard != ''  ">magnetic_card = #{magneticCard},</if>
+			<if test="idCard != null  and idCard != ''  ">id_card = #{idCard},</if>
+			<if test="chipCard != null  and chipCard != ''  ">chip_card = #{chipCard},</if>
+			<if test="status != null  and status != ''  ">status = #{status},</if>
+			<if test="loginIp != null  and loginIp != ''  ">login_ip = #{loginIp},</if>
+			<if test="loginDate != null ">login_date = #{loginDate},</if>
+			<if test="createBy != null  and createBy != ''  ">create_by = #{createBy},</if>
+			<if test="createTime != null  ">create_time = #{createTime},</if>
+			<if test="updateBy != null  and updateBy != ''  ">update_by = #{updateBy},</if>
+			<if test="updateTime != null  ">update_time = #{updateTime},</if>
+			<if test="remark != null  and remark != ''  ">remark = #{remark},</if>
+			<if test="userType != null  and userType != ''  ">user_type = #{userType},</if>
+			<if test="high != null  and high != ''  ">high = #{high},</if>
+			<if test="weight != null  and weight != ''  ">weight = #{weight},</if>
+			<if test="waist != null  and waist != ''  ">waist = #{waist},</if>
+			<if test="hip != null  and hip != ''  ">Hip = #{hip},</if>
+			<if test="contactsName != null  and contactsName != ''  ">contacts_name = #{contactsName},</if>
+			<if test="contactsPhone != null  and contactsPhone != ''  ">contacts_phone = #{contactsPhone},</if>
+			<if test="userLevel != null  and userLevel != ''  ">user_level = #{userLevel},</if>
+			<if test="pressureLevel != null  and pressureLevel != ''  ">pressure_level = #{pressureLevel},</if>
+			<if
+				test="pressureDangerLevel != null  and pressureDangerLevel != ''  ">pressure_danger_level = #{pressureDangerLevel},</if>
+			<if
+				test="glucoseDangerLevel != null  and glucoseDangerLevel != ''  ">glucose_danger_level = #{glucoseDangerLevel},</if>
+			<if test="codeId != null  and codeId != ''  ">code_id = #{codeId},</if>
+			<if test="employeeCard != null  and employeeCard != ''  ">employee_card = #{employeeCard},</if>
+		</trim>
+		where patient_id = #{patientId}
+	</update>
+	<insert id="insertPatientBmi"
+		parameterType="com.hesicare.hospital.health.entity.SysPatientBmi">
+		insert into sys_patient_bmi
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="patientId != null  ">patient_id,</if>
+			<if test="high != null  and high != ''  ">high,</if>
+			<if test="weight != null  and weight != ''  ">weight,</if>
+			<if test="bmi != null  and bmi != ''  ">bmi,</if>
+			<if test="bmiResult != null  and bmiResult != ''  ">bmi_result,</if>
+			<if test="createBy != null  and createBy != ''  ">create_by,</if>
+			<if test="createTime != null  ">create_time,</if>
+			<if test="updateBy != null  and updateBy != ''  ">update_by,</if>
+			<if test="updateTime != null  ">update_time,</if>
+			<if test="remark != null  and remark != ''  ">remark,</if>
+			<if test="measureTime != null">update_time,</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="patientId != null  ">#{patientId},</if>
+			<if test="high != null  and high != ''  ">#{high},</if>
+			<if test="weight != null  and weight != ''  ">#{weight},</if>
+			<if test="bmi != null  and bmi != ''  ">#{bmi},</if>
+			<if test="bmiResult != null  and bmiResult != ''  ">#{bmiResult},</if>
+			<if test="createBy != null  and createBy != ''  ">#{createBy},</if>
+			<if test="createTime != null  ">#{createTime},</if>
+			<if test="updateBy != null  and updateBy != ''  ">#{updateBy},</if>
+			<if test="updateTime != null  ">#{updateTime},</if>
+			<if test="remark != null  and remark != ''  ">#{remark},</if>
+			<if test="measureTime != null">#{measureTime},</if>
+		</trim>
+	</insert>
+	<insert id="insertPatient">
+		insert into sys_patient
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="deptId != null  and deptId != ''  ">dept_id,</if>
+			<if test="avatar != null  and avatar != ''  ">avatar,</if>
+			<if test="loginName != null  and loginName != ''  ">login_name,</if>
+			<if test="patientName != null  and patientName != ''  ">patient_name,</if>
+			<if test="mobile != null  and mobile != ''  ">mobile,</if>
+			<if test="password != null  and password != ''  ">password,</if>
+			<if test="birth != null  ">birth,</if>
+			<if test="sex != null  and sex != ''  ">sex,</if>
+			<if test="hospitalizedNum != null  and hospitalizedNum != ''  ">hospitalized_num,</if>
+			<if test="hospitalizedDate != null  ">hospitalized_date,</if>
+			<if test="leaveDate != null  ">leave_date,</if>
+			<if test="hospitalizedType != null  ">hospitalized_type,</if>
+			<if test="wristbandCode != null  and wristbandCode != ''  ">wristband_code,</if>
+			<if test="bedNum != null  and bedNum != ''  ">bed_num,</if>
+			<if test="doctorId != null  ">doctor_id,</if>
+			<if test="doctorName != null  and doctorName != ''  ">doctor_name,</if>
+			<if test="address != null  and address != ''  ">address,</if>
+			<if test="magneticCard != null  and magneticCard != ''  ">magnetic_card,</if>
+			<if test="idCard != null  and idCard != ''  ">id_card,</if>
+			<if test="chipCard != null  and chipCard != ''  ">chip_card,</if>
+			<if test="status != null  and status != ''  ">status,</if>
+			<if test="loginIp != null  and loginIp != ''  ">login_ip,</if>
+			<if test="loginDate != null  ">login_date,</if>
+			<if test="createBy != null  and createBy != ''  ">create_by,</if>
+			<if test="createTime != null  ">create_time,</if>
+			<if test="updateBy != null  and updateBy != ''  ">update_by,</if>
+			<if test="updateTime != null  ">update_time,</if>
+			<if test="remark != null  and remark != ''  ">remark,</if>
+			<if test="userType != null  and userType != ''  ">user_type,</if>
+			<if test="high != null  and high != ''  ">high,</if>
+			<if test="weight != null  and weight != ''  ">weight,</if>
+			<if test="waist != null  and waist != ''  ">waist,</if>
+			<if test="hip != null  and hip != ''  ">Hip,</if>
+			<if test="contactsName != null  and contactsName != ''  ">contacts_name,</if>
+			<if test="contactsPhone != null  and contactsPhone != ''  ">contacts_phone,</if>
+			<if test="userLevel != null  and userLevel != ''  ">user_level,</if>
+			<if test="pressureLevel != null  and pressureLevel != ''  ">pressure_level,</if>
+			<if
+				test="pressureDangerLevel != null  and pressureDangerLevel != ''  ">pressure_danger_level,</if>
+			<if
+				test="glucoseDangerLevel != null  and glucoseDangerLevel != ''  ">glucose_danger_level,</if>
+			<if test="codeId != null  and codeId != ''  ">code_id,</if>
+			<if test="employeeCard != null  and employeeCard != ''  ">employee_card,</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="deptId != null  and deptId != ''  ">#{deptId},</if>
+			<if test="avatar != null  and avatar != ''  ">#{avatar},</if>
+			<if test="loginName != null  and loginName != ''  ">#{loginName},</if>
+			<if test="patientName != null  and patientName != ''  ">#{patientName},</if>
+			<if test="mobile != null  and mobile != ''  ">#{mobile},</if>
+			<if test="password != null  and password != ''  ">#{password},</if>
+			<if test="birth != null  ">#{birth},</if>
+			<if test="sex != null  and sex != ''  ">#{sex},</if>
+			<if test="hospitalizedNum != null  and hospitalizedNum != ''  ">#{hospitalizedNum},</if>
+			<if test="hospitalizedDate != null  ">#{hospitalizedDate},</if>
+			<if test="leaveDate != null  ">#{leaveDate},</if>
+			<if test="hospitalizedType != null  ">#{hospitalizedType},</if>
+			<if test="wristbandCode != null  and wristbandCode != ''  ">#{wristbandCode},</if>
+			<if test="bedNum != null  and bedNum != ''  ">#{bedNum},</if>
+			<if test="doctorId != null  ">#{doctorId},</if>
+			<if test="doctorName != null  and doctorName != ''  ">#{doctorName},</if>
+			<if test="address != null  and address != ''  ">#{address},</if>
+			<if test="magneticCard != null  and magneticCard != ''  ">#{magneticCard},</if>
+			<if test="idCard != null  and idCard != ''  ">#{idCard},</if>
+			<if test="chipCard != null  and chipCard != ''  ">#{chipCard},</if>
+			<if test="status != null  and status != ''  ">#{status},</if>
+			<if test="loginIp != null  and loginIp != ''  ">#{loginIp},</if>
+			<if test="loginDate != null  ">#{loginDate},</if>
+			<if test="createBy != null  and createBy != ''  ">#{createBy},</if>
+			<if test="createTime != null  ">#{createTime},</if>
+			<if test="updateBy != null  and updateBy != ''  ">#{updateBy},</if>
+			<if test="updateTime != null  ">#{updateTime},</if>
+			<if test="remark != null  and remark != ''  ">#{remark},</if>
+			<if test="userType != null  and userType != ''  ">#{userType},</if>
+			<if test="high != null  and high != ''  ">#{high},</if>
+			<if test="weight != null  and weight != ''  ">#{weight},</if>
+			<if test="waist != null  and waist != ''  ">#{waist},</if>
+			<if test="hip != null  and hip != ''  ">#{hip},</if>
+			<if test="contactsName != null  and contactsName != ''  ">#{contactsName},</if>
+			<if test="contactsPhone != null  and contactsPhone != ''  ">#{contactsPhone},</if>
+			<if test="userLevel != null  and userLevel != ''  ">#{userLevel},</if>
+			<if test="pressureLevel != null  and pressureLevel != ''  ">#{pressureLevel},</if>
+			<if
+				test="pressureDangerLevel != null  and pressureDangerLevel != ''  ">#{pressureDangerLevel},</if>
+			<if
+				test="glucoseDangerLevel != null  and glucoseDangerLevel != ''  ">#{glucoseDangerLevel},</if>
+			<if test="codeId != null  and codeId != ''  ">#{codeId},</if>
+			<if test="employeeCard != null  and employeeCard != ''  ">#{employeeCard},</if>
+		</trim>
+	</insert>
+</mapper>

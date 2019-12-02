@@ -1,0 +1,2 @@
+mvn install:install-file -Dfile=C:\Sybercare\project\NewAdapter\hospital-adapters\src\main\webapp\lib\CacheDB.jar -DgroupId=com.intersys.jdbc -DartifactId=CacheDB -Dversion=1.0.0 -Dpackaging=jar  -DgeneratePom=true -DcreateChecksum=true
+mvn install:install-file -Dfile=C:\Sybercare\project\NewAdapter\hospital-adapters\src\main\webapp\lib\ojdbc14.jar -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.4.0 -Dpackaging=jar  -DgeneratePom=true -DcreateChecksum=true

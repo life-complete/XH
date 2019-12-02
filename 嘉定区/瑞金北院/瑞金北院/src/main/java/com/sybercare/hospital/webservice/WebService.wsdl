@@ -1,0 +1,119 @@
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ESB.Service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://ESB.Service/">
+    <wsdl:types>
+        <s:schema elementFormDefault="qualified" targetNamespace="http://ESB.Service/">
+            <s:element name="CallESB">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="xmlMessage" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="CallESBResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="CallESBResult" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="string" nillable="true" type="s:string"/>
+        </s:schema>
+    </wsdl:types>
+    <wsdl:message name="CallESBSoapIn">
+        <wsdl:part name="parameters" element="tns:CallESB"/>
+    </wsdl:message>
+    <wsdl:message name="CallESBSoapOut">
+        <wsdl:part name="parameters" element="tns:CallESBResponse"/>
+    </wsdl:message>
+    <wsdl:message name="CallESBHttpGetIn">
+        <wsdl:part name="xmlMessage" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="CallESBHttpGetOut">
+        <wsdl:part name="Body" element="tns:string"/>
+    </wsdl:message>
+    <wsdl:message name="CallESBHttpPostIn">
+        <wsdl:part name="xmlMessage" type="s:string"/>
+    </wsdl:message>
+    <wsdl:message name="CallESBHttpPostOut">
+        <wsdl:part name="Body" element="tns:string"/>
+    </wsdl:message>
+    <wsdl:portType name="ESBServiceSoap">
+        <wsdl:operation name="CallESB">
+            <wsdl:input message="tns:CallESBSoapIn"/>
+            <wsdl:output message="tns:CallESBSoapOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="ESBServiceHttpGet">
+        <wsdl:operation name="CallESB">
+            <wsdl:input message="tns:CallESBHttpGetIn"/>
+            <wsdl:output message="tns:CallESBHttpGetOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="ESBServiceHttpPost">
+        <wsdl:operation name="CallESB">
+            <wsdl:input message="tns:CallESBHttpPostIn"/>
+            <wsdl:output message="tns:CallESBHttpPostOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ESBServiceSoap" type="tns:ESBServiceSoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CallESB">
+            <soap:operation soapAction="http://ESB.Service/CallESB" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ESBServiceSoap12" type="tns:ESBServiceSoap">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CallESB">
+            <soap12:operation soapAction="http://ESB.Service/CallESB" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ESBServiceHttpGet" type="tns:ESBServiceHttpGet">
+        <http:binding verb="GET"/>
+        <wsdl:operation name="CallESB">
+            <http:operation location="/CallESB"/>
+            <wsdl:input>
+                <http:urlEncoded/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ESBServiceHttpPost" type="tns:ESBServiceHttpPost">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="CallESB">
+            <http:operation location="/CallESB"/>
+            <wsdl:input>
+                <mime:content type="application/x-www-form-urlencoded"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:mimeXml part="Body"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ESBService">
+        <wsdl:port name="ESBServiceSoap" binding="tns:ESBServiceSoap">
+            <soap:address location="http://172.21.11.59/ESBService/ESBService.asmx"/>
+        </wsdl:port>
+        <wsdl:port name="ESBServiceSoap12" binding="tns:ESBServiceSoap12">
+            <soap12:address location="http://172.21.11.59/ESBService/ESBService.asmx"/>
+        </wsdl:port>
+        <wsdl:port name="ESBServiceHttpGet" binding="tns:ESBServiceHttpGet">
+            <http:address location="http://172.21.11.59/ESBService/ESBService.asmx"/>
+        </wsdl:port>
+        <wsdl:port name="ESBServiceHttpPost" binding="tns:ESBServiceHttpPost">
+            <http:address location="http://172.21.11.59/ESBService/ESBService.asmx"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

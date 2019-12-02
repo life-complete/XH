@@ -1,0 +1,50 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>实时心率</title>
+<link rel="stylesheet" th:href="@{css/ns.css}" />
+<link rel="stylesheet" th:href="@{css/style_all.css}" />
+<script th:src="@{js/map.js}"></script>
+<script th:src="@{js/vue/vue.js}"></script>
+<script th:src="@{js/vue/vue-resource.js}"></script>
+<script th:src="@{js/sockjs.min.js}"></script>
+<script th:src="@{js/stomp.js}"></script>
+<script th:src="@{js/jquery-3.1.1.js}"></script>
+</head>
+<body>
+	<div id="wrapper" class="ns-container">
+		<div class="ns-title">
+			<img src="images/search-24.png" class="ns-icon" alt="" />心率实时监测
+		</div>
+		<div class="ns-body">
+			<div class="ns-search-bar ns-float-fix" style="height:100px;">
+			</div>
+			<ul class="heartbox">
+				<li v-for="item in heartData">
+					<div class="namebox">
+						<h4 class="h4" v-text="item.userName"></h4>
+						<span class="depart" v-text="item.departmentName"></span>
+					</div>
+					<div class="heartbreathbox">
+						<div class="heartfont" :class="{bg:item.isHeartNormal == 0}">
+							<p class="icon" :class="{abnormal:item.heartAbnormal == 0}">心&nbsp;&nbsp;率</p>
+							<p class="text-center">
+								<span class="number" v-text="item.heart"></span>次/分
+							</p>
+						</div>
+						<div class="breathfont" :class="{bg:item.isBreathNormal == 0}">
+							<p class="icon" :class="{abnormal:item.breathAbnormal == 0}">呼吸率</p>
+							<p class="text-center">
+								<span class="number" v-text="item.breath"></span>次/分
+							</p>
+						</div>
+					</div>
+					<div class="wasbed" v-if="item.isOnBed == '0'">离床</div>
+					<div class="wasbed inwasbed" v-if="item.isOnBed == '1'">在床</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" th:src="@{js/heartTime.js}"></script>
