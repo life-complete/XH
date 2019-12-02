@@ -1,0 +1,571 @@
+2019-09-20 11:38:56.072 [main] INFO  com.hesicare.BusinessServerApplication -
+				Starting BusinessServerApplication on DESKTOP-8BDEFD3 with PID 22036 (C:\Users\zealt\AppData\Local\Temp\HZ$D.779.3342\HZ$D.779.3343\V2.0.1版本\后台部署包\院外\hesiCloud-business.jar started by zealt in F:\)
+2019-09-20 11:38:56.081 [main] INFO  com.hesicare.BusinessServerApplication -
+				The following profiles are active: prod
+2019-09-20 11:38:59.377 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:38:59.402 [main] INFO  org.apache.catalina.core.StandardService -
+				Starting service [Tomcat]
+2019-09-20 11:38:59.404 [main] INFO  org.apache.catalina.core.StandardEngine -
+				Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-09-20 11:38:59.417 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2019-09-20 11:38:59.418 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-09-20 11:38:59.418 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-09-20 11:38:59.436 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2019-09-20 11:38:59.541 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2019-09-20 11:39:03.309 [main] INFO  com.alibaba.druid.pool.DruidDataSource -
+				{dataSource-1} inited
+2019-09-20 11:39:03.442 [main] INFO  org.quartz.impl.StdSchedulerFactory -
+				Using default implementation for ThreadExecutor
+2019-09-20 11:39:03.485 [main] INFO  com.hesicare.BusinessServerApplication -
+				Starting BusinessServerApplication on DESKTOP-8BDEFD3 with PID 12940 (C:\Users\zealt\AppData\Local\Temp\HZ$D.779.3342\HZ$D.779.3343\V2.0.1版本\后台部署包\院外\hesiCloud-business.jar started by zealt in F:\)
+2019-09-20 11:39:03.494 [main] INFO  com.hesicare.BusinessServerApplication -
+				The following profiles are active: prod
+2019-09-20 11:39:03.499 [main] INFO  org.quartz.core.SchedulerSignalerImpl -
+				Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-09-20 11:39:03.501 [main] INFO  org.quartz.core.QuartzScheduler -
+				Quartz Scheduler v.2.3.0 created.
+2019-09-20 11:39:03.521 [main] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler meta-data: Quartz Scheduler (v2.3.0) 'hesicareScheduler' with instanceId 'DESKTOP-8BDEFD31568950743449'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2019-09-20 11:39:03.522 [main] INFO  org.quartz.impl.StdSchedulerFactory -
+				Quartz scheduler 'hesicareScheduler' initialized from an externally provided properties instance.
+2019-09-20 11:39:03.527 [main] INFO  org.quartz.impl.StdSchedulerFactory -
+				Quartz scheduler version: 2.3.0
+2019-09-20 11:39:03.531 [main] INFO  org.quartz.core.QuartzScheduler -
+				JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5d2a4eed
+2019-09-20 11:39:06.899 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping -
+				Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-09-20 11:39:08.526 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-09-20 11:39:08.541 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-09-20 11:39:08.544 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-09-20 11:39:08.550 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear EntityHelper entityTableMap cache.
+2019-09-20 11:39:08.957 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper -
+				Context refreshed
+2019-09-20 11:39:09.037 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper -
+				Found 1 custom documentation plugin(s)
+2019-09-20 11:39:09.130 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner -
+				Scanning for api listing references
+2019-09-20 11:39:09.441 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_1
+2019-09-20 11:39:09.644 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: profileUsingGET_1
+2019-09-20 11:39:09.657 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: resetPwdUsingPOST_1
+2019-09-20 11:39:09.668 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: updateUsingPOST_1
+2019-09-20 11:39:09.691 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: loginUsingPOST_1
+2019-09-20 11:39:09.854 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_2
+2019-09-20 11:39:09.878 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_3
+2019-09-20 11:39:09.890 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_4
+2019-09-20 11:39:09.956 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_5
+2019-09-20 11:39:09.984 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_6
+2019-09-20 11:39:09.994 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listTrendUsingGET_1
+2019-09-20 11:39:10.049 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_7
+2019-09-20 11:39:10.130 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_1
+2019-09-20 11:39:10.148 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_1
+2019-09-20 11:39:10.159 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_8
+2019-09-20 11:39:10.180 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_2
+2019-09-20 11:39:10.186 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_2
+2019-09-20 11:39:10.205 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_9
+2019-09-20 11:39:10.232 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_3
+2019-09-20 11:39:10.238 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_3
+2019-09-20 11:39:10.250 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_10
+2019-09-20 11:39:10.276 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_4
+2019-09-20 11:39:10.283 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_1
+2019-09-20 11:39:10.288 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_4
+2019-09-20 11:39:10.294 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_11
+2019-09-20 11:39:10.315 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingGET_1
+2019-09-20 11:39:10.351 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_5
+2019-09-20 11:39:10.369 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_2
+2019-09-20 11:39:10.379 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_5
+2019-09-20 11:39:10.391 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_12
+2019-09-20 11:39:10.399 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingPOST_1
+2019-09-20 11:39:10.411 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_3
+2019-09-20 11:39:10.426 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_4
+2019-09-20 11:39:10.429 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_13
+2019-09-20 11:39:10.442 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_6
+2019-09-20 11:39:10.448 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_14
+2019-09-20 11:39:10.484 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_15
+2019-09-20 11:39:10.511 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_7
+2019-09-20 11:39:10.515 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_5
+2019-09-20 11:39:10.517 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_6
+2019-09-20 11:39:10.522 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_16
+2019-09-20 11:39:10.525 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: queryPeriodUsingGET_1
+2019-09-20 11:39:10.528 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingGET_2
+2019-09-20 11:39:10.559 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_8
+2019-09-20 11:39:10.571 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_6
+2019-09-20 11:39:10.576 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_7
+2019-09-20 11:39:10.580 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_17
+2019-09-20 11:39:10.584 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingPOST_2
+2019-09-20 11:39:10.592 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_9
+2019-09-20 11:39:10.603 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_8
+2019-09-20 11:39:10.610 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingPOST_1
+2019-09-20 11:39:10.613 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_18
+2019-09-20 11:39:10.616 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingPOST_3
+2019-09-20 11:39:10.626 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_10
+2019-09-20 11:39:10.632 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: changeStatusUsingPOST_1
+2019-09-20 11:39:10.648 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_9
+2019-09-20 11:39:10.665 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: getUserByIdUsingGET_1
+2019-09-20 11:39:10.713 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:10.738 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+				Using a shared selector for servlet write/read
+2019-09-20 11:39:10.775 [main] INFO  com.hesicare.BusinessServerApplication -
+				Started BusinessServerApplication in 15.631 seconds (JVM running for 16.091)
+2019-09-20 11:39:10.889 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:10.906 [main] INFO  org.apache.catalina.core.StandardService -
+				Starting service [Tomcat]
+2019-09-20 11:39:10.907 [main] INFO  org.apache.catalina.core.StandardEngine -
+				Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-09-20 11:39:10.917 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2019-09-20 11:39:10.917 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-09-20 11:39:10.917 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-09-20 11:39:10.920 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2019-09-20 11:39:11.011 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2019-09-20 11:39:11.828 [Quartz Scheduler [hesicareScheduler]] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler hesicareScheduler_$_DESKTOP-8BDEFD31568950743449 started.
+2019-09-20 11:39:14.280 [main] INFO  com.alibaba.druid.pool.DruidDataSource -
+				{dataSource-1} inited
+2019-09-20 11:39:14.337 [main] INFO  org.quartz.impl.StdSchedulerFactory -
+				Using default implementation for ThreadExecutor
+2019-09-20 11:39:14.360 [main] INFO  org.quartz.core.SchedulerSignalerImpl -
+				Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-09-20 11:39:14.360 [main] INFO  org.quartz.core.QuartzScheduler -
+				Quartz Scheduler v.2.3.0 created.
+2019-09-20 11:39:14.368 [main] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler meta-data: Quartz Scheduler (v2.3.0) 'hesicareScheduler' with instanceId 'DESKTOP-8BDEFD31568950754341'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2019-09-20 11:39:14.368 [main] INFO  org.quartz.impl.StdSchedulerFactory -
+				Quartz scheduler 'hesicareScheduler' initialized from an externally provided properties instance.
+2019-09-20 11:39:14.369 [main] INFO  org.quartz.impl.StdSchedulerFactory -
+				Quartz scheduler version: 2.3.0
+2019-09-20 11:39:14.370 [main] INFO  org.quartz.core.QuartzScheduler -
+				JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@4044fb95
+2019-09-20 11:39:16.057 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping -
+				Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-09-20 11:39:17.113 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-09-20 11:39:17.116 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-09-20 11:39:17.119 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-09-20 11:39:17.122 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear EntityHelper entityTableMap cache.
+2019-09-20 11:39:17.466 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper -
+				Context refreshed
+2019-09-20 11:39:17.524 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper -
+				Found 1 custom documentation plugin(s)
+2019-09-20 11:39:17.615 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner -
+				Scanning for api listing references
+2019-09-20 11:39:17.858 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_1
+2019-09-20 11:39:18.031 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: profileUsingGET_1
+2019-09-20 11:39:18.041 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: resetPwdUsingPOST_1
+2019-09-20 11:39:18.051 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: updateUsingPOST_1
+2019-09-20 11:39:18.067 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: loginUsingPOST_1
+2019-09-20 11:39:18.142 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_2
+2019-09-20 11:39:18.154 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_3
+2019-09-20 11:39:18.160 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_4
+2019-09-20 11:39:18.191 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_5
+2019-09-20 11:39:18.202 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_6
+2019-09-20 11:39:18.207 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listTrendUsingGET_1
+2019-09-20 11:39:18.234 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_7
+2019-09-20 11:39:18.249 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_1
+2019-09-20 11:39:18.254 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_1
+2019-09-20 11:39:18.259 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_8
+2019-09-20 11:39:18.266 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_2
+2019-09-20 11:39:18.269 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_2
+2019-09-20 11:39:18.275 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_9
+2019-09-20 11:39:18.287 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_3
+2019-09-20 11:39:18.289 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_3
+2019-09-20 11:39:18.292 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_10
+2019-09-20 11:39:18.303 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_4
+2019-09-20 11:39:18.307 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_1
+2019-09-20 11:39:18.310 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_4
+2019-09-20 11:39:18.314 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_11
+2019-09-20 11:39:18.319 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingGET_1
+2019-09-20 11:39:18.332 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_5
+2019-09-20 11:39:18.337 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_2
+2019-09-20 11:39:18.339 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_5
+2019-09-20 11:39:18.345 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_12
+2019-09-20 11:39:18.349 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingPOST_1
+2019-09-20 11:39:18.354 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_3
+2019-09-20 11:39:18.368 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_4
+2019-09-20 11:39:18.372 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_13
+2019-09-20 11:39:18.382 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_6
+2019-09-20 11:39:18.388 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_14
+2019-09-20 11:39:18.430 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_15
+2019-09-20 11:39:18.451 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_7
+2019-09-20 11:39:18.455 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_5
+2019-09-20 11:39:18.457 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_6
+2019-09-20 11:39:18.461 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_16
+2019-09-20 11:39:18.464 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: queryPeriodUsingGET_1
+2019-09-20 11:39:18.467 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingGET_2
+2019-09-20 11:39:18.495 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_8
+2019-09-20 11:39:18.505 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_6
+2019-09-20 11:39:18.508 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_7
+2019-09-20 11:39:18.511 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_17
+2019-09-20 11:39:18.514 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingPOST_2
+2019-09-20 11:39:18.522 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_9
+2019-09-20 11:39:18.532 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_8
+2019-09-20 11:39:18.536 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingPOST_1
+2019-09-20 11:39:18.538 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_18
+2019-09-20 11:39:18.540 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingPOST_3
+2019-09-20 11:39:18.550 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_10
+2019-09-20 11:39:18.552 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: changeStatusUsingPOST_1
+2019-09-20 11:39:18.561 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_9
+2019-09-20 11:39:18.568 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: getUserByIdUsingGET_1
+2019-09-20 11:39:18.607 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:18.624 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+				Using a shared selector for servlet write/read
+2019-09-20 11:39:18.638 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Pausing ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:18.639 [main] INFO  org.apache.catalina.core.StandardService -
+				Stopping service [Tomcat]
+2019-09-20 11:39:18.653 [main] INFO  org.apache.catalina.util.LifecycleBase -
+				The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2019-09-20 11:39:18.653 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Stopping ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:18.654 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Destroying ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:18.670 [main] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler hesicareScheduler_$_DESKTOP-8BDEFD31568950754341 shutting down.
+2019-09-20 11:39:18.670 [main] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler hesicareScheduler_$_DESKTOP-8BDEFD31568950754341 paused.
+2019-09-20 11:39:18.671 [main] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler hesicareScheduler_$_DESKTOP-8BDEFD31568950754341 shutdown complete.
+2019-09-20 11:39:18.690 [main] INFO  com.alibaba.druid.pool.DruidDataSource -
+				{dataSource-1} closed
+2019-09-20 11:39:40.681 [main] INFO  com.hesicare.BusinessServerApplication -
+				Starting BusinessServerApplication on DESKTOP-8BDEFD3 with PID 1184 (C:\Users\zealt\AppData\Local\Temp\HZ$D.779.3342\HZ$D.779.3343\V2.0.1版本\后台部署包\院外\hesiCloud-business.jar started by zealt in F:\)
+2019-09-20 11:39:40.706 [main] INFO  com.hesicare.BusinessServerApplication -
+				The following profiles are active: prod
+2019-09-20 11:39:44.021 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:44.043 [main] INFO  org.apache.catalina.core.StandardService -
+				Starting service [Tomcat]
+2019-09-20 11:39:44.045 [main] INFO  org.apache.catalina.core.StandardEngine -
+				Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-09-20 11:39:44.057 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2019-09-20 11:39:44.058 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-09-20 11:39:44.058 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-09-20 11:39:44.061 [main] INFO  org.apache.catalina.core.AprLifecycleListener -
+				OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2019-09-20 11:39:44.153 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2019-09-20 11:39:47.385 [main] INFO  com.alibaba.druid.pool.DruidDataSource -
+				{dataSource-1} inited
+2019-09-20 11:39:47.458 [main] INFO  org.quartz.impl.StdSchedulerFactory -
+				Using default implementation for ThreadExecutor
+2019-09-20 11:39:47.478 [main] INFO  org.quartz.core.SchedulerSignalerImpl -
+				Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-09-20 11:39:47.478 [main] INFO  org.quartz.core.QuartzScheduler -
+				Quartz Scheduler v.2.3.0 created.
+2019-09-20 11:39:47.486 [main] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler meta-data: Quartz Scheduler (v2.3.0) 'hesicareScheduler' with instanceId 'DESKTOP-8BDEFD31568950787462'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2019-09-20 11:39:47.486 [main] INFO  org.quartz.impl.StdSchedulerFactory -
+				Quartz scheduler 'hesicareScheduler' initialized from an externally provided properties instance.
+2019-09-20 11:39:47.487 [main] INFO  org.quartz.impl.StdSchedulerFactory -
+				Quartz scheduler version: 2.3.0
+2019-09-20 11:39:47.489 [main] INFO  org.quartz.core.QuartzScheduler -
+				JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@18025ced
+2019-09-20 11:39:48.965 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping -
+				Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-09-20 11:39:49.869 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-09-20 11:39:49.873 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-09-20 11:39:49.877 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-09-20 11:39:49.880 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear EntityHelper entityTableMap cache.
+2019-09-20 11:39:50.264 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper -
+				Context refreshed
+2019-09-20 11:39:50.305 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper -
+				Found 1 custom documentation plugin(s)
+2019-09-20 11:39:50.379 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner -
+				Scanning for api listing references
+2019-09-20 11:39:50.590 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_1
+2019-09-20 11:39:50.718 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: profileUsingGET_1
+2019-09-20 11:39:50.725 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: resetPwdUsingPOST_1
+2019-09-20 11:39:50.731 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: updateUsingPOST_1
+2019-09-20 11:39:50.741 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: loginUsingPOST_1
+2019-09-20 11:39:50.795 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_2
+2019-09-20 11:39:50.803 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_3
+2019-09-20 11:39:50.809 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_4
+2019-09-20 11:39:50.832 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_5
+2019-09-20 11:39:50.840 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_6
+2019-09-20 11:39:50.844 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listTrendUsingGET_1
+2019-09-20 11:39:50.869 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_7
+2019-09-20 11:39:50.890 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_1
+2019-09-20 11:39:50.898 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_1
+2019-09-20 11:39:50.905 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_8
+2019-09-20 11:39:50.914 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_2
+2019-09-20 11:39:50.915 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_2
+2019-09-20 11:39:50.923 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_9
+2019-09-20 11:39:50.934 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_3
+2019-09-20 11:39:50.936 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_3
+2019-09-20 11:39:50.939 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_10
+2019-09-20 11:39:50.948 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_4
+2019-09-20 11:39:50.951 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_1
+2019-09-20 11:39:50.953 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_4
+2019-09-20 11:39:50.956 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_11
+2019-09-20 11:39:50.959 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingGET_1
+2019-09-20 11:39:50.967 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_5
+2019-09-20 11:39:50.971 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_2
+2019-09-20 11:39:50.973 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_5
+2019-09-20 11:39:50.978 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_12
+2019-09-20 11:39:50.982 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingPOST_1
+2019-09-20 11:39:50.988 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_3
+2019-09-20 11:39:51.000 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_4
+2019-09-20 11:39:51.003 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_13
+2019-09-20 11:39:51.012 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_6
+2019-09-20 11:39:51.016 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_14
+2019-09-20 11:39:51.050 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_15
+2019-09-20 11:39:51.074 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_7
+2019-09-20 11:39:51.077 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_5
+2019-09-20 11:39:51.079 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_6
+2019-09-20 11:39:51.081 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_16
+2019-09-20 11:39:51.082 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: queryPeriodUsingGET_1
+2019-09-20 11:39:51.084 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingGET_2
+2019-09-20 11:39:51.106 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_8
+2019-09-20 11:39:51.119 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: detailUsingGET_6
+2019-09-20 11:39:51.122 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_7
+2019-09-20 11:39:51.126 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_17
+2019-09-20 11:39:51.129 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingPOST_2
+2019-09-20 11:39:51.135 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_9
+2019-09-20 11:39:51.144 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_8
+2019-09-20 11:39:51.149 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingPOST_1
+2019-09-20 11:39:51.151 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: listUsingGET_18
+2019-09-20 11:39:51.153 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: removeUsingPOST_3
+2019-09-20 11:39:51.162 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: addSaveUsingPOST_10
+2019-09-20 11:39:51.165 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: changeStatusUsingPOST_1
+2019-09-20 11:39:51.172 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: editSaveUsingPOST_9
+2019-09-20 11:39:51.177 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator -
+				Generating unique operation named: getUserByIdUsingGET_1
+2019-09-20 11:39:51.207 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:51.220 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool -
+				Using a shared selector for servlet write/read
+2019-09-20 11:39:51.231 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Pausing ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:51.232 [main] INFO  org.apache.catalina.core.StandardService -
+				Stopping service [Tomcat]
+2019-09-20 11:39:51.244 [main] INFO  org.apache.catalina.util.LifecycleBase -
+				The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2019-09-20 11:39:51.245 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Stopping ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:51.245 [main] INFO  org.apache.coyote.http11.Http11NioProtocol -
+				Destroying ProtocolHandler ["http-nio-8095"]
+2019-09-20 11:39:51.263 [main] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler hesicareScheduler_$_DESKTOP-8BDEFD31568950787462 shutting down.
+2019-09-20 11:39:51.263 [main] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler hesicareScheduler_$_DESKTOP-8BDEFD31568950787462 paused.
+2019-09-20 11:39:51.264 [main] INFO  org.quartz.core.QuartzScheduler -
+				Scheduler hesicareScheduler_$_DESKTOP-8BDEFD31568950787462 shutdown complete.
+2019-09-20 11:39:51.282 [main] INFO  com.alibaba.druid.pool.DruidDataSource -
+				{dataSource-1} closed

@@ -1,0 +1,12 @@
+2019-09-20 11:38:57.617 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner -
+				Skipping MapperFactoryBean with name 'sysDictTypeMapper' and 'com.hesicare.system.mapper.SysDictTypeMapper' mapperInterface. Bean already defined with the same name!
+2019-09-20 11:38:57.617 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner -
+				No MyBatis mapper was found in '[com.hesicare]' package. Please check your configuration.
+2019-09-20 11:39:07.514 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner -
+				Skipping MapperFactoryBean with name 'sysDictTypeMapper' and 'com.hesicare.system.mapper.SysDictTypeMapper' mapperInterface. Bean already defined with the same name!
+2019-09-20 11:39:07.519 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner -
+				No MyBatis mapper was found in '[com.hesicare]' package. Please check your configuration.
+2019-09-20 11:39:42.252 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner -
+				Skipping MapperFactoryBean with name 'sysDictTypeMapper' and 'com.hesicare.system.mapper.SysDictTypeMapper' mapperInterface. Bean already defined with the same name!
+2019-09-20 11:39:42.264 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner -
+				No MyBatis mapper was found in '[com.hesicare]' package. Please check your configuration.

@@ -1,0 +1,24 @@
+2019-09-20 11:38:56.078 [main] DEBUG com.hesicare.BusinessServerApplication -
+				Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-09-20 11:39:03.490 [main] DEBUG com.hesicare.BusinessServerApplication -
+				Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-09-20 11:39:03.810 [main] DEBUG c.hesicare.quartz.mapper.SysJobMapper.selectJobAll -
+				==>  Preparing: select job_id, job_name, job_group, method_name, method_params, cron_expression, misfire_policy, concurrent, status, create_by, create_time, remark from sys_job 
+2019-09-20 11:39:04.133 [main] DEBUG c.hesicare.quartz.mapper.SysJobMapper.selectJobAll -
+				==> Parameters: 
+2019-09-20 11:39:04.259 [main] DEBUG c.hesicare.quartz.mapper.SysJobMapper.selectJobAll -
+				<==      Total: 0
+2019-09-20 11:39:14.422 [main] DEBUG c.hesicare.quartz.mapper.SysJobMapper.selectJobAll -
+				==>  Preparing: select job_id, job_name, job_group, method_name, method_params, cron_expression, misfire_policy, concurrent, status, create_by, create_time, remark from sys_job 
+2019-09-20 11:39:14.544 [main] DEBUG c.hesicare.quartz.mapper.SysJobMapper.selectJobAll -
+				==> Parameters: 
+2019-09-20 11:39:14.581 [main] DEBUG c.hesicare.quartz.mapper.SysJobMapper.selectJobAll -
+				<==      Total: 0
+2019-09-20 11:39:40.703 [main] DEBUG com.hesicare.BusinessServerApplication -
+				Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-09-20 11:39:47.547 [main] DEBUG c.hesicare.quartz.mapper.SysJobMapper.selectJobAll -
+				==>  Preparing: select job_id, job_name, job_group, method_name, method_params, cron_expression, misfire_policy, concurrent, status, create_by, create_time, remark from sys_job 
+2019-09-20 11:39:47.589 [main] DEBUG c.hesicare.quartz.mapper.SysJobMapper.selectJobAll -
+				==> Parameters: 
+2019-09-20 11:39:47.637 [main] DEBUG c.hesicare.quartz.mapper.SysJobMapper.selectJobAll -
+				<==      Total: 0
